@@ -30,7 +30,7 @@ function addSheet() {
     newSheet.getRange(1, 1, cpShtLastRow, cpShtLastColumn).setValues(cpData);
     let targetToCopy = newSheet.getRange(1, 1, cpShtLastRow, cpShtLastColumn);
 
-    //csheet は、操作するシートE36の内容をR5にコピーする場合。この場合は、値のみコピー。PASTE_NORMAL値、数式、書式、結合
+    //PASTE_NORMAL値、数式、書式、結合
     cpShtRng.copyTo(targetToCopy, SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
 
     newSheet.getRange(8, 5).setValue(name);
